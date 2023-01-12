@@ -11,28 +11,28 @@ layout {
     }
 
 
-	configuration name="helix" cwd="/Users/andrewtransfer/.config/helix" {
+	configuration name="helix" cwd="/Users/andrew/.config/helix" {
 		pane {
 			command "hx"
 			args "config.toml"
 		}
 	}
 
-	configuration name="kitty" cwd="/Users/andrewtransfer/.config/kitty" {
+	configuration name="kitty" cwd="/Users/andrew/.config/kitty" {
 		pane {
 			command "hx"
 			args "kitty.conf"
 		}
 	}
 
-	configuration name="zsh" cwd="/Users/andrewtransfer/.zsh/" {
+	configuration name="zsh" cwd="/Users/andrew/.zsh/" {
 		pane {
 			command "hx"
 			args "zshrc.zsh"
 		}
 	}
 
-	configuration name="zellij" cwd="/Users/andrewtransfer/.zellij" {
+	configuration name="zellij" cwd="/Users/andrew/.zellij" {
 		pane {
 			command "hx"
 			args "config.kdl"
