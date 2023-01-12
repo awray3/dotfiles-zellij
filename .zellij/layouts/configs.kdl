@@ -1,0 +1,41 @@
+layout {
+
+	tab_template name="configuration" {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        children
+        pane size=2 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+
+
+	configuration name="helix" cwd="/Users/andrewtransfer/.config/helix" {
+		pane {
+			command "hx"
+			args "config.toml"
+		}
+	}
+
+	configuration name="kitty" cwd="/Users/andrewtransfer/.config/kitty" {
+		pane {
+			command "hx"
+			args "kitty.conf"
+		}
+	}
+
+	configuration name="zsh" cwd="/Users/andrewtransfer/.zsh/" {
+		pane {
+			command "hx"
+			args "zshrc.zsh"
+		}
+	}
+
+	configuration name="zellij" cwd="/Users/andrewtransfer/.zellij" {
+		pane {
+			command "hx"
+			args "config.kdl"
+		}
+	}
+}
