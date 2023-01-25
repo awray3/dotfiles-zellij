@@ -30,4 +30,5 @@ function zlc () {
      attach $CONFIG_SESSION_NAME "$@"
 }
 
-eval "$(zellij setup --generate-auto-start zsh)"
+# Uncomment if you want zellij on startup
+# eval "$(zellij setup --generate-auto-start zsh)"
