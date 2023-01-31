@@ -19,6 +19,21 @@ function zls () {
  fi
 }
 
+function zk () {
+  ZJ_SESSIONS=$(zellij list-sessions)
+  NO_SESSIONS=$(echo "${ZJ_SESSIONS}" | wc -l)
+
+  if [ "${NO_SESSIONS}" -ge 2 ]; then
+      zellij kill-session \
+      "$(echo "${ZJ_SESSIONS}" | sk)"
+  elif [ "${NO_SESSIONS}" -eq 1 ]; then
+    # already in zellij, so just ls.
+    zellij kill-session "${ZJ_SESSIONS}"
+  else
+    echo "No zellij sessions to kill."
+  fi
+}
+
 # Opens zellij config.
 # all extra args are passed to zellij attach.
 function zlc () {
@@ -29,6 +44,17 @@ function zlc () {
   zellij --layout $CONFIG_LAYOUT \
      attach $CONFIG_SESSION_NAME "$@"
 }
+
+# shortcut of zellij
+function zel () {
+  # input: name of the session
+  zellij --layout .zellij/layout.kdl attach --create $1
+}
+
+
+
+
+
 
 # Uncomment if you want zellij on startup
 # eval "$(zellij setup --generate-auto-start zsh)"
